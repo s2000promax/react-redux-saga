@@ -1,4 +1,4 @@
-import { CREATE_POST, FETCH_POST, HIDE_ALERT, HIDE_LOADER, SHOW_ALERT, SHOW_LOADER } from "./types";
+import { CREATE_POST, FETCH_POST, HIDE_ALERT, HIDE_LOADER, REQUEST_POST, SHOW_ALERT, SHOW_LOADER } from "./types";
 
 export function createPost(post) {
     return {
@@ -8,6 +8,10 @@ export function createPost(post) {
 }
 
 export function fetchPosts() {
+return {
+         type: REQUEST_POST
+       }
+    /*
     return async dispatch => {
         try {
             dispatch(showLoader())
@@ -19,7 +23,7 @@ export function fetchPosts() {
 dispatch(showAlert('Something wrong'))
 dispatch(hideLoader())
         }
-    }
+    }*/
 }
 
 export function showLoader() {

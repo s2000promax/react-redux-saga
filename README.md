@@ -6,6 +6,8 @@
 
 5. Install Async library Redux-Thunk: npm install redux-thunk
 
+6. Install Saga library: npm install redux-saga
+
 
 # Getting Started with Create React App
 
