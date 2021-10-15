@@ -1,4 +1,4 @@
-import { CREATE_POST } from "./types"
+import { CREATE_POST, FETCH_POST } from "./types"
 
 const initialState = {
 posts: [],
@@ -13,6 +13,8 @@ export const postReducer = (state = initialState, action) => {
               ...state, posts: state.posts.concat([action.payload])
               //...state, posts: [...state.posts, action.payload]
           }
+
+          case FETCH_POST: return {...state, fetchedPosts: action.payload}
     }
     
 }
